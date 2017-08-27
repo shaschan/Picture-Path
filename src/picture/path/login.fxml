@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<StackPane prefWidth="231.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="picture.path.LoginController">
+  <children>
+    <StackPane>
+      <children>
+        <VBox spacing="10.0">
+          <children>
+            <GridPane>
+              <children>
+                <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <TextField fx:id="user" promptText="Use &quot;username&quot; to login" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <TextField fx:id="password" promptText="Use &quot;password&quot; to login" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="148.0" minWidth="10.0" prefWidth="109.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="228.0" minWidth="10.0" prefWidth="189.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints />
+              </rowConstraints>
+            </GridPane>
+            <StackPane>
+              <children>
+                <Button fx:id="loginButton" alignment="CENTER" defaultButton="true" mnemonicParsing="false" text="Login" StackPane.alignment="CENTER" />
+              </children>
+            </StackPane>
+                  <StackPane layoutX="10.0" layoutY="80.0">
+                     <children>
+                        <ChoiceBox fx:id="choice" prefWidth="150.0">
+                           <effect>
+                              <Lighting diffuseConstant="1.37" specularConstant="1.3" specularExponent="8.37">
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                              </Lighting>
+                           </effect>
+                           <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Data Feeder" />
+                                    <String fx:value="Result Viewer" />
+                                </FXCollections>
+                            </items>
+                        </ChoiceBox>
+                        <Label fx:id="choiceText" text="Choice" />
+                     </children>
+                  </StackPane>
+          </children>
+        </VBox>
+      </children>
+    </StackPane>
+  </children>
+  <padding>
+    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+  </padding>
+</StackPane>

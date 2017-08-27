@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="AnchorPane" prefHeight="645.0" prefWidth="877.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="picture.path.ResultViewerController">
+   <children>
+      <Pane fx:id="cnv" layoutX="108.0" layoutY="78.0" />
+      <Line endX="640.0" layoutX="238.0" layoutY="66.0" opacity="0.3" startX="-240.0" strokeWidth="2.0" />
+      <Label fx:id="rdText" layoutX="203.0" layoutY="5.0" text="Respondent ID" />
+      <TextField fx:id="rd" layoutX="210.0" layoutY="25.0" prefHeight="25.0" prefWidth="64.0" promptText="no. only" />
+      <Label fx:id="mdText" layoutX="121.0" layoutY="5.0" text="Map ID" />
+      <TextField fx:id="md" layoutX="110.0" layoutY="25.0" prefHeight="25.0" prefWidth="64.0" promptText="no. only" />
+      <Label fx:id="pdText" layoutX="22.0" layoutY="5.0" text="Project ID" />
+      <TextField fx:id="pd" layoutX="18.0" layoutY="25.0" prefHeight="25.0" prefWidth="64.0" promptText="no. only" />
+      <Button fx:id="clear" layoutX="727.0" layoutY="26.0" mnemonicParsing="false" text="Clear" textFill="#cf3819" />
+      <Button fx:id="expExl" layoutX="783.0" layoutY="26.0" mnemonicParsing="false" text="Export Excel" textFill="#0b9a09" />
+      <Pane fx:id="imgPane" layoutX="-1.0" layoutY="67.0" prefHeight="521.0" prefWidth="112.0" visible="true">
+         <children>
+             <ChoiceBox fx:id="gender" layoutX="9.0" layoutY="14.0" prefHeight="25.0" prefWidth="95.0">
+                 <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Male" />
+                        <String fx:value="Female" />
+                        <String fx:value="Other" />
+                        <String fx:value="All" />
+                    </FXCollections>
+                </items>
+             </ChoiceBox>
+            <Label fx:id="genderText" layoutX="35.0" layoutY="18.0" text="Gender" />
+            <TextField fx:id="ageSt" layoutX="6.0" layoutY="48.0" prefHeight="29.0" prefWidth="48.0" promptText="Age (start)">
+               <font>
+                  <Font name="Aparajita" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="idnMark" layoutX="9.0" layoutY="87.0" prefHeight="29.0" prefWidth="95.0" promptText="Identifying markers">
+               <font>
+                  <Font name="Aparajita" size="13.0" />
+               </font>
+            </TextField>
+            <ChoiceBox fx:id="drsTyp" layoutX="8.0" layoutY="125.0" prefHeight="25.0" prefWidth="95.0">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Indian" />
+                        <String fx:value="Western" />
+                        <String fx:value="AngloIndian" />
+                        <String fx:value="SouthIndian" />
+                        <String fx:value="Other" />
+                        <String fx:value="All" />
+                    </FXCollections>
+                </items>
+            </ChoiceBox>
+            <Label fx:id="drsTypText" layoutX="20.0" layoutY="129.0" text="Dress Type" />
+            <TextField fx:id="topCol" layoutX="8.0" layoutY="162.0" prefHeight="29.0" prefWidth="95.0" promptText="Top Color">
+               <font>
+                  <Font name="Aparajita" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="botCol" layoutX="8.0" layoutY="202.0" prefHeight="29.0" prefWidth="95.0" promptText="Bottom Color">
+               <font>
+                  <Font name="Aparajita" size="13.0" />
+               </font>
+            </TextField>
+            <RadioButton fx:id="beardYes" layoutX="11.0" layoutY="310.0" mnemonicParsing="false" text="Yes" />
+            <RadioButton fx:id="beardNo" layoutX="55.0" layoutY="310.0" mnemonicParsing="false" text="No" />
+            <Label fx:id="beard" layoutX="32.0" layoutY="292.0" text="Beard?" />
+            <Label fx:id="Spectacles" layoutX="26.0" layoutY="343.0" text="Spectacles?" />
+            <RadioButton fx:id="SpectaclesNo" layoutX="56.0" layoutY="360.0" mnemonicParsing="false" text="No" />
+            <RadioButton fx:id="SpectaclesYes" layoutX="11.0" layoutY="360.0" mnemonicParsing="false" text="Yes" />
+            <TextField fx:id="spcMark" layoutX="7.0" layoutY="241.0" prefHeight="29.0" prefWidth="95.0" promptText="Special Marker">
+               <font>
+                  <Font name="Aparajita" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="entTimeSt" layoutY="401.0" prefHeight="29.0" prefWidth="54.0" promptText="HH:MM:SS ">
+               <font>
+                  <Font name="Aparajita" size="10.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="ageEn" layoutX="58.0" layoutY="48.0" prefHeight="29.0" prefWidth="48.0" promptText="Age (end)">
+               <font>
+                  <Font name="Aparajita" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="entTimeEn" layoutX="55.0" layoutY="401.0" prefHeight="29.0" prefWidth="58.0" promptText="HH:MM:SS ">
+               <font>
+                  <Font name="Aparajita" size="10.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="extTimeEn" layoutX="55.0" layoutY="446.0" prefHeight="29.0" prefWidth="58.0" promptText="HH:MM:SS ">
+               <font>
+                  <Font name="Aparajita" size="10.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="extTimeSt" layoutY="446.0" prefHeight="29.0" prefWidth="54.0" promptText="HH:MM:SS ">
+               <font>
+                  <Font name="Aparajita" size="10.0" />
+               </font>
+            </TextField>
+            <DatePicker fx:id="fromDate" layoutY="493.0" prefHeight="25.0" prefWidth="54.0" promptText="Date" />
+            <DatePicker fx:id="toDate" layoutX="55.0" layoutY="493.0" prefHeight="25.0" prefWidth="54.0" promptText="Date" />
+            <Label layoutX="2.0" layoutY="387.0" text="From (Entry time) To" />
+            <Label layoutX="4.0" layoutY="431.0" text="From (Exit time) To" />
+            <Label layoutX="18.0" layoutY="475.0" text="From (Date) To" />
+         </children>
+      </Pane>
+      <Button fx:id="go" defaultButton="true" layoutX="520.0" layoutY="18.0" mnemonicParsing="false" text="GO" textFill="#6c418d">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Label fx:id="message" layoutX="644.0" layoutY="8.0" />
+      <Button fx:id="reset" ellipsisString="" graphicTextGap="7.0" layoutX="662.0" layoutY="26.0" mnemonicParsing="false" text="RESET" textFill="#9b15d0" underline="true">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+         <effect>
+            <Glow />
+         </effect>
+      </Button>
+      <ChoiceBox fx:id="imgName" layoutX="348.0" layoutY="25.0" prefWidth="150.0" />
+      <Label fx:id="imgNameText" layoutX="389.0" layoutY="7.0" text="Image Name" />
+      <Line endX="266.0" layoutX="112.0" layoutY="340.0" rotate="90.0" startX="-266.0" />
+      <Label layoutX="3.0" layoutY="585.0" text="Selection Count" />
+      <Label layoutX="2.0" layoutY="599.0" text="Aggregate Count" />
+      <Label fx:id="selCnt" layoutX="91.0" layoutY="586.0" text="NA" textFill="#12e40f" />
+      <Label fx:id="aggCnt" layoutX="99.0" layoutY="600.0" text="0" textFill="#f21111" />
+      <Button fx:id="submit" layoutX="32.0" layoutY="623.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="17.0" prefWidth="50.0" text="Submit" textFill="#c30be3">
+         <padding>
+            <Insets bottom="0.001" left="0.001" right="0.001" top="0.001" />
+         </padding>
+      </Button>
+   </children>
+</Pane>

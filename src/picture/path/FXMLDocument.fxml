@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="AnchorPane" prefHeight="575.0" prefWidth="877.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="picture.path.FXMLDocumentController">
+   <children>
+      <Pane fx:id="cnv" layoutX="108.0" layoutY="78.0" />
+      <Line endX="640.0" layoutX="238.0" layoutY="66.0" opacity="0.3" startX="-240.0" strokeWidth="2.0" />
+      <Button fx:id="selVid" layoutX="486.0" layoutY="13.0" mnemonicParsing="false" text="Select Video" />
+      <Button fx:id="selImg" layoutX="355.0" layoutY="13.0" mnemonicParsing="false" text="Select Image" />
+      <Label fx:id="rdText" layoutX="203.0" layoutY="5.0" text="Respondent ID" />
+      <TextField fx:id="rd" layoutX="210.0" layoutY="25.0" prefHeight="25.0" prefWidth="64.0" promptText="no. only" />
+      <Label fx:id="mdText" layoutX="121.0" layoutY="5.0" text="Map ID" />
+      <TextField fx:id="md" layoutX="110.0" layoutY="25.0" prefHeight="25.0" prefWidth="64.0" promptText="no. only" />
+      <Label fx:id="pdText" layoutX="22.0" layoutY="5.0" text="Project ID" />
+      <TextField fx:id="pd" layoutX="18.0" layoutY="25.0" prefHeight="25.0" prefWidth="64.0" promptText="no. only" />
+      <Label fx:id="imgText" layoutX="346.0" layoutY="42.0" text="No Image Selected" textFill="#4745bf">
+          <font>
+            <Font name="Cambria Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="vdText" layoutX="477.0" layoutY="42.0" text="No Video Selected" textFill="#89a810">
+         <font>
+            <Font name="Cambria Bold" size="12.0" />
+         </font></Label>
+      <Button fx:id="clear" layoutX="749.0" layoutY="26.0" mnemonicParsing="false" text="Clear" textFill="#cf3819" />
+      <Button fx:id="save" layoutX="803.0" layoutY="26.0" mnemonicParsing="false" text="Save" textFill="#0b9a09" />
+      <Pane fx:id="imgPane" layoutX="-1.0" layoutY="67.0" prefHeight="506.0" prefWidth="112.0" visible="true">
+         <children>
+             <ChoiceBox fx:id="gender" layoutX="9.0" layoutY="14.0" prefHeight="25.0" prefWidth="95.0">
+                 <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Male" />
+                        <String fx:value="Female" />
+                        <String fx:value="Other" />
+                    </FXCollections>
+                </items>
+             </ChoiceBox>
+            <Label fx:id="genderText" layoutX="35.0" layoutY="18.0" text="Gender" />
+            <TextField fx:id="age" layoutX="9.0" layoutY="48.0" prefHeight="29.0" prefWidth="95.0" promptText="Age (Numeric)">
+               <font>
+                  <Font name="Aparajita" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="idnMark" layoutX="9.0" layoutY="87.0" prefHeight="29.0" prefWidth="95.0" promptText="Identifying markers">
+               <font>
+                  <Font name="Aparajita" size="13.0" />
+               </font>
+            </TextField>
+            <ChoiceBox fx:id="drsTyp" layoutX="8.0" layoutY="125.0" prefHeight="25.0" prefWidth="95.0">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Indian" />
+                        <String fx:value="Western" />
+                        <String fx:value="AngloIndian" />
+                        <String fx:value="SouthIndian" />
+                        <String fx:value="Other" />
+                    </FXCollections>
+                </items>
+            </ChoiceBox>
+            <Label fx:id="drsTypText" layoutX="20.0" layoutY="129.0" text="Dress Type" />
+            <TextField fx:id="topCol" layoutX="8.0" layoutY="162.0" prefHeight="29.0" prefWidth="95.0" promptText="Top Color">
+               <font>
+                  <Font name="Aparajita" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="botCol" layoutX="8.0" layoutY="202.0" prefHeight="29.0" prefWidth="95.0" promptText="Bottom Color">
+               <font>
+                  <Font name="Aparajita" size="13.0" />
+               </font>
+            </TextField>
+            <RadioButton fx:id="beardYes" layoutX="11.0" layoutY="310.0" mnemonicParsing="false" text="Yes" />
+            <RadioButton fx:id="beardNo" layoutX="55.0" layoutY="310.0" mnemonicParsing="false" text="No" />
+            <Label fx:id="beard" layoutX="32.0" layoutY="292.0" text="Beard?" />
+            <Label fx:id="Spectacles" layoutX="26.0" layoutY="343.0" text="Spectacles?" />
+            <RadioButton fx:id="SpectaclesNo" layoutX="56.0" layoutY="360.0" mnemonicParsing="false" text="No" />
+            <RadioButton fx:id="SpectaclesYes" layoutX="11.0" layoutY="360.0" mnemonicParsing="false" text="Yes" />
+            <TextField fx:id="spcMark" layoutX="7.0" layoutY="241.0" prefHeight="29.0" prefWidth="95.0" promptText="Special Marker">
+               <font>
+                  <Font name="Aparajita" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="entTime" layoutX="9.0" layoutY="394.0" prefHeight="29.0" prefWidth="95.0" promptText="Entry HH:MM:SS ">
+               <font>
+                  <Font name="Aparajita" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="exitTime" layoutX="9.0" layoutY="431.0" prefHeight="29.0" prefWidth="95.0" promptText="Exit  HH:MM:SS">
+               <font>
+                  <Font name="Aparajita" size="13.0" />
+               </font>
+            </TextField>
+            <Label fx:id="imp" layoutX="97.0" layoutY="115.0" text="*" textFill="#d71010">
+               <font>
+                  <Font name="Candara Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="imp1" layoutX="97.0" layoutY="1.0" text="*" textFill="#d71010">
+               <font>
+                  <Font name="Candara Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="imp2" layoutX="97.0" layoutY="35.0" text="*" textFill="#d71010">
+               <font>
+                  <Font name="Candara Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="imp3" layoutX="97.0" layoutY="74.0" text="*" textFill="#d71010">
+               <font>
+                  <Font name="Candara Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="imp4" layoutX="97.0" layoutY="149.0" text="*" textFill="#d71010">
+               <font>
+                  <Font name="Candara Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="imp5" layoutX="97.0" layoutY="189.0" text="*" textFill="#d71010">
+               <font>
+                  <Font name="Candara Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="imp6" layoutX="93.0" layoutY="418.0" text="*" textFill="#d71010">
+               <font>
+                  <Font name="Candara Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="imp7" layoutX="92.0" layoutY="381.0" text="*" textFill="#d71010">
+               <font>
+                  <Font name="Candara Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="imp8" layoutX="87.0" layoutY="330.0" text="*" textFill="#d71010">
+               <font>
+                  <Font name="Candara Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="imp9" layoutX="68.0" layoutY="279.0" text="*" textFill="#d71010">
+               <font>
+                  <Font name="Candara Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="imp61" layoutX="95.0" layoutY="456.0" text="*" textFill="#d71010">
+               <font>
+                  <Font name="Candara Bold" size="21.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="dateAt" layoutX="12.0" layoutY="472.0" prefHeight="25.0" prefWidth="84.0" promptText="Date" />
+         </children>
+      </Pane>
+      <Button fx:id="go" defaultButton="true" layoutX="593.0" layoutY="15.0" mnemonicParsing="false" text="GO" textFill="#6c418d">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Label fx:id="message" layoutX="644.0" layoutY="8.0" />
+      <Button fx:id="reset" ellipsisString="" graphicTextGap="7.0" layoutX="676.0" layoutY="26.0" mnemonicParsing="false" text="RESET" textFill="#9b15d0" underline="true">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+         <effect>
+            <Glow />
+         </effect>
+      </Button>
+   </children>
+</Pane>
